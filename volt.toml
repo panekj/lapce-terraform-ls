@@ -1,11 +1,53 @@
-name = "<plugin-name>"
+name = "lapce-terraform-ls"
 version = "0.0.0"
-author = "<your name>"
-display-name = "<plugin-display-name>"
-description = "<plugin-description>"
+author = "panekj"
+display-name = "Terraform"
+description = "Terraform support for Lapce"
+wasm = "bin/lapce-terraform-ls.wasm"
 
-# for non-theme plugins
-# wasm = "bin/<plugin-name>.wasm"
+[activation]
+language = ["terraform"]
+workspace-contains = [
+  "*/*.tf",
+  "*/*.tfvars",
+]
 
-# for theme plugins
-# themes = ["theme-one.toml", "theme-two.toml", "theme-three.toml"]
+[config."volt.serverPath"]
+default = ""
+
+[config."volt.serverArgs"]
+default = []
+
+[config."terraform.logFilePath"]
+default = ""
+description = """
+Path to a file for Terraform executions to be logged into (`TF_LOG_PATH`) with support for variables (e.g. Timestamp, Pid, Ppid) via Go template syntax `{{.VarName}}`
+"""
+
+[config."terraform.timeout"]
+default = ""
+
+[config."terraform.path"]
+default = ""
+description = """
+Path to the Terraform binary.
+This is usually looked up automatically from `$PATH` and should not need to be specified in majority of cases. Use this to override the automatic lookup.
+"""
+
+[config."indexing.ignorePaths"]
+default = []
+
+[config."indexing.ignoreDirectoryNames"]
+default = []
+
+[config."commandPrefix"]
+default = ""
+
+[config."ignoreSingleFileWarning"]
+default = false
+
+[config."experimentalFeatures.validateOnSave"]
+default = false
+
+[config."experimentalFeatures.prefillRequiredFields"]
+default = false
