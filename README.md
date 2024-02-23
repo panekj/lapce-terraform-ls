@@ -1,0 +1,1 @@
+# `terraform-ls` for Lapce

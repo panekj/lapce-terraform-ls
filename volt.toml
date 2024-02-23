@@ -1,10 +1,11 @@
 name = "lapce-terraform-ls"
-version = "0.0.1+terraform-ls.0.32.7"
+version = "0.0.2+terraform-ls.0.32.7"
 author = "panekj"
 display-name = "Terraform (terraform-ls)"
 description = "Terraform support for Lapce"
 wasm = "lapce-terraform-ls.wasm"
 icon = "terraform-vertical-color.svg"
+repository = "https://github.com/panekj/lapce-terraform-ls"
 
 [activation]
 language = ["terraform"]
