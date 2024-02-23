@@ -1,6 +1,8 @@
-reorder_imports = true
-match_arm_leading_pipes = "always"
-newline_style = "unix"
-tab_spaces = 2
+group_imports       = "StdExternalCrate"
 imports_granularity = "Crate"
-group_imports = "StdExternalCrate"
+reorder_imports     = true
+
+match_arm_leading_pipes = "always"
+
+newline_style = "unix"
+tab_spaces    = 2

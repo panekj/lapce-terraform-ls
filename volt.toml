@@ -1,9 +1,10 @@
 name = "lapce-terraform-ls"
-version = "0.0.0"
+version = "0.0.1+terraform-ls.0.32.7"
 author = "panekj"
-display-name = "Terraform"
+display-name = "Terraform (terraform-ls)"
 description = "Terraform support for Lapce"
-wasm = "bin/lapce-terraform-ls.wasm"
+wasm = "lapce-terraform-ls.wasm"
+icon = "terraform-vertical-color.svg"
 
 [activation]
 language = ["terraform"]
@@ -14,9 +15,11 @@ workspace-contains = [
 
 [config."volt.serverPath"]
 default = ""
+description = "Path to custom terraform-ls server"
 
 [config."volt.serverArgs"]
 default = []
+description = "Custom arguments for terraform-ls server"
 
 [config."terraform.logFilePath"]
 default = ""
@@ -26,6 +29,7 @@ Path to a file for Terraform executions to be logged into (`TF_LOG_PATH`) with s
 
 [config."terraform.timeout"]
 default = ""
+description = ""
 
 [config."terraform.path"]
 default = ""
@@ -36,18 +40,24 @@ This is usually looked up automatically from `$PATH` and should not need to be s
 
 [config."indexing.ignorePaths"]
 default = []
+description = ""
 
 [config."indexing.ignoreDirectoryNames"]
 default = []
+description = ""
 
 [config."commandPrefix"]
 default = ""
+description = ""
 
 [config."ignoreSingleFileWarning"]
 default = false
+description = ""
 
 [config."experimentalFeatures.validateOnSave"]
 default = false
+description = ""
 
 [config."experimentalFeatures.prefillRequiredFields"]
 default = false
+description = ""

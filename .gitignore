@@ -3,3 +3,5 @@ Cargo.lock
 .crates.toml
 .crates2.json
 /bin
+.DS_Store
+**.wasm

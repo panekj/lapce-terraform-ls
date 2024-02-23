@@ -1,11 +1,6 @@
 [tasks.default]
 clear = true
-dependencies = [
-  "fmt",
-  "check",
-  "clippy",
-  "release",
-]
+dependencies = ["fmt", "check", "clippy", "release"]
 
 [tasks.fmt]
 command = "cargo"
@@ -27,8 +22,8 @@ args = ["clippy"]
 
 [tasks.build-dev]
 command = "cargo"
-args = ["install", "--path", ".", "--debug"]
+args = ["build"]
 
 [tasks.build-release]
 command = "cargo"
-args = ["install", "--path", "."]
+args = ["build", "--release"]
